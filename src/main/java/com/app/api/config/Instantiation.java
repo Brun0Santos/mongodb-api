@@ -19,6 +19,7 @@ public class Instantiation implements CommandLineRunner {
         UserEntity personOne = new UserEntity(null, "Leticia", "leticia@gmail.com");
         UserEntity personTwo = new UserEntity(null, "Marcos", "marcos@gmail.com");
         UserEntity personThree = new UserEntity(null, "Kleber", "kleber@gmail.com");
+        UserEntity personFour = new UserEntity(null, "Lilian", "lilian@gmail.com");
         userRepository.saveAll(Arrays.asList(personOne, personTwo, personThree));
     }
 }
