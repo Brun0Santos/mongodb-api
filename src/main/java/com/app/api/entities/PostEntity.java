@@ -1,5 +1,6 @@
 package com.app.api.entities;
 
+import com.app.api.dto.AuthorDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,17 +13,17 @@ public class PostEntity {
     private LocalDateTime date;
     private String title;
     private String body;
-    private UserEntity user;
+    private AuthorDto author;
 
     public PostEntity() {
     }
 
-    public PostEntity(String id, LocalDateTime date, String title, String body, UserEntity user) {
+    public PostEntity(String id, LocalDateTime date, String title, String body, AuthorDto author) {
         this.id = id;
         this.date = date;
         this.title = title;
         this.body = body;
-        this.user = user;
+        this.author = author;
     }
 
     public String getId() {
@@ -41,7 +42,7 @@ public class PostEntity {
         return body;
     }
 
-    public UserEntity getUser() {
-        return user;
+    public AuthorDto getUser() {
+        return author;
     }
 }
